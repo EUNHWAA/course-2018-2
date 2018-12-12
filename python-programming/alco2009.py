@@ -1,4 +1,7 @@
 import pandas as pd
+import pickle
+with open("alco2009.pickle","wb") as oFile:
+    pickle.dump(alco2009,oFile)
 alco2009=pd.read_csv("niaa-report2009.csv", index_col="State")
 
 print(alco2009.max())
